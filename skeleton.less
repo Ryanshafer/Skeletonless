@@ -1,0 +1,199 @@
+/*
+ * Skeleton base
+ * Basic and global styles for generating a grid system, structural layout, and page templates
+ * ------------------------------------------------------------------------------------------- */
+
+
+// GRID SYSTEM
+// -----------
+
+.column, .columns                           { float: left; display: inline; margin-left: @gridGutterWidth/2; margin-right: @gridGutterWidth/2; }
+.row                                        { margin-bottom: 20px; }
+
+/* Nested Column Classes */
+.column.alpha, .columns.alpha               { margin-left: 0; }
+.column.omega, .columns.omega               { margin-right: 0;}
+
+
+.container {
+
+  // Default columns
+  .one.column		{ .createCol(1); }
+  .two.columns		{ .createCol(2); }
+  .three.columns	{ .createCol(3); }
+  .four.columns     { .createCol(4); }
+  .five.columns     { .createCol(5); }
+  .six.columns     	{ .createCol(6); }
+  .seven.columns    { .createCol(7); }
+  .eight.columns    { .createCol(8); }
+  .nine.columns     { .createCol(9); }
+  .ten.columns	    { .createCol(10); }
+  .eleven.columns   { .createCol(11); }
+  .twelve.columns   { .createCol(12); }
+  .thirteen.columns { .createCol(13); }
+  .fourteen.columns { .createCol(14); }
+  .fifteen.columns  { .createCol(15); }
+  .sixteen.columns  { .createCol(16); }
+
+  .one-third.column                { width: round(@siteWidth*0.3333) - @gridGutterWidth; }
+  .two-thirds.column               { width: round(@siteWidth*0.6666) - @gridGutterWidth; }
+
+  // Offset column options
+  .offset-by-one		{ .offset(1); }
+  .offset-by-two		{ .offset(2); }
+  .offset-by-three		{ .offset(3); }
+  .offset-by-four		{ .offset(4); }
+  .offset-by-five		{ .offset(5); }
+  .offset-by-six		{ .offset(6); }
+  .offset-by-seven		{ .offset(7); }
+  .offset-by-eight		{ .offset(8); }
+  .offset-by-nine		{ .offset(9); }
+  .offset-by-ten		{ .offset(10); }
+  .offset-by-eleven		{ .offset(11); }
+  .offset-by-twelve		{ .offset(12); }
+  .offset-by-thirteen	{ .offset(13); }
+  .offset-by-fourteen	{ .offset(14); }
+  .offset-by-fifteen	{ .offset(15); }
+}
+
+/* #Tablet (Portrait)
+================================================== */
+
+    /* Note: Design for a width of @tabletWidth */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+
+	.column, .columns                           {margin-left: @gridGutterWidthTablet/2; margin-right: @gridGutterWidthTablet/2; }
+
+	/* Nested Column Classes */
+	.column.alpha, .columns.alpha               { margin-left: 0; margin-right: @gridGutterWidthTablet/2;}
+	.column.omega, .columns.omega               { margin-left: @gridGutterWidthTablet/2; margin-right: 0; }
+
+
+	.container {
+		width: @tabletWidth;
+
+
+	  // Default columns
+	  .one.column		{ .createCol(1, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .two.columns		{ .createCol(2, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .three.columns	{ .createCol(3, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .four.columns     { .createCol(4, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .five.columns     { .createCol(5, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .six.columns     	{ .createCol(6, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .seven.columns    { .createCol(7, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .eight.columns    { .createCol(8, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .nine.columns     { .createCol(9, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .ten.columns	    { .createCol(10, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .eleven.columns   { .createCol(11, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .twelve.columns   { .createCol(12, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .thirteen.columns { .createCol(13, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .fourteen.columns { .createCol(14, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .fifteen.columns  { .createCol(15, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .sixteen.columns  { .createCol(16, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+
+	  .one-third.column                { width: round(@tabletWidth*0.3333) - @gridGutterWidthTablet; }
+	  .two-thirds.column               { width: round(@tabletWidth*0.6666) - @gridGutterWidthTablet; }
+
+	  // Offset column options
+	  .offset-by-one		{ .offset(1, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-two		{ .offset(2, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-three		{ .offset(3, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-four		{ .offset(4, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-five		{ .offset(5, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-six		{ .offset(6, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-seven		{ .offset(7, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-eight		{ .offset(8, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-nine		{ .offset(9, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-ten		{ .offset(10, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-eleven		{ .offset(11, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-twelve		{ .offset(12, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-thirteen	{ .offset(13, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-fourteen	{ .offset(14, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	  .offset-by-fifteen	{ .offset(15, @gridColumnWidthTablet, @gridGutterWidthTablet); }
+	}
+	
+	
+}	
+
+/*  #Mobile (Portrait)
+================================================== */
+
+    /* Note: Design for a width of 320px */
+@media only screen and (max-width: 767px) {
+
+	.container {
+	    width: @mobileWidthMobileP - @gridGutterWidthMobile;
+        .columns, .column { margin: 0; }
+	  	.one.column,
+        .two.columns,
+        .three.columns,
+        .four.columns,
+        .five.columns,
+        .six.columns,
+        .seven.columns,
+        .eight.columns,
+        .nine.columns,
+        .ten.columns,
+        .eleven.columns,
+        .twelve.columns,
+        .thirteen.columns,
+        .fourteen.columns,
+        .fifteen.columns,
+        .sixteen.columns,
+        .one-third.column,
+        .two-thirds.column  { width: @mobileWidthMobileP - @gridGutterWidthMobile; }
+
+        /* Offsets */
+        .offset-by-one,
+        .offset-by-two,
+        .offset-by-three,
+        .offset-by-four,
+        .offset-by-five,
+        .offset-by-six,
+        .offset-by-seven,
+        .offset-by-eight,
+        .offset-by-nine,
+        .offset-by-ten,
+        .offset-by-eleven,
+        .offset-by-twelve,
+        .offset-by-thirteen,
+        .offset-by-fourteen,
+        .offset-by-fifteen { padding-left: 0; }
+	  
+	}
+
+}
+
+/* #Mobile (Landscape)
+================================================== */
+
+    /* Note: Design for a width of 480px */
+
+	@media only screen and (min-width: 480px) and (max-width: 767px) {
+        
+		.container { 
+			width: @mobileWidthMobileL - (@gridGutterWidthMobile*3);
+        	.columns, .column { margin: 0; }
+
+	        .one.column,
+	        .two.columns,
+	        .three.columns,
+	        .four.columns,
+	        .five.columns,
+	        .six.columns,
+	        .seven.columns,
+	        .eight.columns,
+	        .nine.columns,
+	        .ten.columns,
+	        .eleven.columns,
+	        .twelve.columns,
+	        .thirteen.columns,
+	        .fourteen.columns,
+	        .fifteen.columns,
+	        .sixteen.columns,
+	        .one-third.column,
+	        .two-thirds.column { width: @mobileWidthMobileL - (@gridGutterWidthMobile*3); }
+		}
+		
+	}
